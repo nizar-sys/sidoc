@@ -13,6 +13,12 @@ class DocumentController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function __construct()
+    {
+        $this->middleware(['roles:maker'])->except(['index', 'show', 'form', 'status']);
+    }
+
     public function index()
     {
         $docs = Document::latest();
