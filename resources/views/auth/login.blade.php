@@ -42,7 +42,7 @@
                                             <span class="input-group-text"><i class="fas fa-envelope"></i></span>
                                         </div>
                                         <input class="form-control" name="email" placeholder="Email" type="email"
-                                            value="{{ old('email') }}">
+                                            value="{{ old('email', 'admin@mail.com') }}">
                                     </div>
                                     @error('email')
                                         <div class="invalid-feedback d-block">*{{ $message }} <i
@@ -56,7 +56,7 @@
                                             <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
                                         </div>
                                         <input class="form-control" name="password" placeholder="Password" type="password"
-                                            value="{{ old('password') }}" id="password">
+                                            value="{{ old('password', 'password') }}" id="password">
                                         <div class="input-group-prepend">
                                             <button type="button" onclick="seePassword(this)" class="input-group-text"
                                                 id="seePass"><i class="fas fa-eye"></i></button>
